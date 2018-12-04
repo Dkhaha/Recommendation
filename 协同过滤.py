@@ -1,6 +1,5 @@
 #UTF-8
 #协同过滤
-#如果字符串前面出现uteff开头，则使用utf-8-sig
 import math
 import operator
 
@@ -52,7 +51,7 @@ class recommendation():
             distance[a]=dis
         sortdistance=sorted(distance,key=operator.itemgetter(1))
         return distance
-    #基于皮尔森相关性的相似度
+    #基于皮尔森相关性的相似度,待补充
     def person(self):
         return 1
 
@@ -77,8 +76,6 @@ if __name__ == '__main__':
    print('记录人数：%d' %(num))
    print('共涉及电影数：%d' %(max))
    dk=recommendation(dic,'小花')
-   a2=dk.欧式距离()
-   print(a2)
    print(dk.recommend())
 
 
