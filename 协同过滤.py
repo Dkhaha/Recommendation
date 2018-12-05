@@ -48,7 +48,7 @@ class recommendation():
         x,_=self.houxuanren()
         for a in x:
             dis = math.sqrt(sum([pow(float(self.sample[a][i]) - float(self.sample[self.name][i]), 2) for i in self.sample[self.name].keys()]))
-            distance[a]=dis
+            distance[a]=1/（1+dis）
         sortdistance=sorted(distance,key=operator.itemgetter(1))
         return distance
     #基于皮尔森相关性的相似度,待补充
